@@ -1,24 +1,57 @@
-# README
+# ファミリー産婦人科クリニック
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
 
-Things you may want to cover:
+ファミリー産婦人科クリニックという架空のクリニックの予約サイトです。
 
-* Ruby version
+---
 
-* System dependencies
+### サイトテーマ
 
-* Configuration
+クリニックの来院予約システム。
 
-* Database creation
+---
 
-* Database initialization
+### テーマを選んだ理由
 
-* How to run the test suite
+産婦人科医の減少により、地元のクリニックでは膨大な待ち時間が発生している現状があります。いつ診察してもらえるか分からない不安から患者が殺到してしまう側面もあると思うので、事前に予約してもらうシステムを作ろうと思いました。来院する時間があらかじめ決められているので待合室は混雑せず、待ち時間の減少により患者の家族による送迎も容易になります。10 分間隔で予約してもらうことにより診察時間にゆとりがうまれ、事前に相談内容をオンライン上で確認できるので、医師がしっかり患者と向き合える環境を作ることも可能になります。
 
-* Services (job queues, cache servers, search engines, etc.)
+---
 
-* Deployment instructions
+### ターゲットユーザ
 
-* ...
+クリニックの医師、産婦人科を利用する妊婦さん、患者さん。
+
+---
+
+### 主な利用シーン
+
+#### 医師
+
+予約と相談内容の確認。
+
+#### 妊婦、患者
+
+来院予約、相談内容の記入、予約や来院履歴の確認。
+
+---
+
+## 設計書
+
+<...>
+
+---
+
+## チャレンジ要素一覧
+
+<https://docs.google.com/spreadsheets/d/1toPswANU38lmgt_4d6ciueelMVVHRMtYk5pdkOB1JMc/edit?usp=sharing>
+
+---
+
+## 開発環境
+
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JS ライブラリ：jQuery
+- IDE：Cloud9
