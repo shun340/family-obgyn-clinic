@@ -45,7 +45,15 @@ URL直打ち等により他の妊婦・患者さんの予約や相談内容に�
 
 #### 医師
 
-予約と相談内容の確認。
+予約の確認と編集、相談内容の確認、相談に対するコメント。
+
+#### 看護師
+
+予約の確認。
+
+####事務スタッフ
+
+予約の確認、編集。
 
 #### 妊婦・患者
 
@@ -54,9 +62,9 @@ URL直打ち等により他の妊婦・患者さんの予約や相談内容に�
 ---
 
 ## 設計書
-* ER図
+* ER図  
 <https://drive.google.com/file/d/1xaHHICu5U7161Iyf4rrCW8cHHq2-dmTf/view?usp=sharing>
-* テーブル定義書
+* テーブル定義書 
 <https://docs.google.com/spreadsheets/d/16qnm8RctupmRYlvW68AGZJnnxVBhAdgWhOXc9rByHLA/edit?usp=sharing>
 
 ---
