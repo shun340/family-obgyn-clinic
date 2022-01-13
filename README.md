@@ -54,9 +54,9 @@ URL直打ち等により他の妊婦・患者さんの予約や相談内容に�
 ---
 
 ## 設計書
-*ER図
+* ER図
 <https://drive.google.com/file/d/1xaHHICu5U7161Iyf4rrCW8cHHq2-dmTf/view?usp=sharing>
-*テーブル定義書
+* テーブル定義書
 <https://docs.google.com/spreadsheets/d/16qnm8RctupmRYlvW68AGZJnnxVBhAdgWhOXc9rByHLA/edit?usp=sharing>
 
 ---
