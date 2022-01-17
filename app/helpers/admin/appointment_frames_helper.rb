@@ -1,0 +1,2 @@
+module Admin::AppointmentFramesHelper
+end
