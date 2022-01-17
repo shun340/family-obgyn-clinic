@@ -15,11 +15,12 @@ class DeviseCreatePatients < ActiveRecord::Migration[5.2]
       t.datetime :remember_created_at
       
       ## 追加
-      t.string :last_name
-      t.string :first_name
-      t.string :last_name_kana
-      t.string :first_name_kana
-      t.string :phone_number
+      t.string  :last_name, null: false
+      t.string  :first_name, null: false
+      t.string  :last_name_kana, null: false
+      t.string  :first_name_kana, null: false
+      t.integer :age, null: false
+      t.string  :phone_number, null: false
 
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false
