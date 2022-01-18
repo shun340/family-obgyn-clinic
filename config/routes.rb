@@ -12,7 +12,8 @@ Rails.application.routes.draw do
     resources :patients, except:[:new, :create, :destroy]
     resources :appointment_frames, only: :index
     resources :appointments, only:[:index, :show, :update] do
-      resources :doctor_comments, except:[:index, :show]
+      resources :appointment_frames, only: :update
+      resources :doctor_comments, except:[:index, :show, :destroy]
       resource  :checks, only:[:create, :destroy]
     end
   end
@@ -25,18 +26,18 @@ Rails.application.routes.draw do
   }
 
   scope module: :public do
-    root to: "homes#top"
-    get "about" => "homes#about"
-    
-    resource :patients, only:[:edit, :update] do
-      get "my_page" => "patients#show"
+    root to: "homes#top"                                         #トップページ
+    get "about" => "homes#about"                                 #アバウトページ　
+
+    resource :patients, only:[:edit, :update] do                 #患者情報変更ページ・変更処理
+      get "my_page" => "patients#show"                           #患者マイページ
     end
-    
-    resources :appointment_frames, only:[:index, :edit, :update]
-    resources :appointments, only:[:new, :index, :show] do
-      post "confirm" => "appointments#confirm"
+
+    resources :appointment_frames, only:[:index, :edit, :update] #予約一覧ページ・予約キャンセルページ・キャンセル処理
+    resources :appointments, only:[:new, :index, :show] do       #予約情報入力ページ・予約一覧ページ・予約詳細ページ
+      post "confirm" => "appointments#confirm"                   #予約情報確認ページ
     end
   end
-    
-    
+
+
 end
