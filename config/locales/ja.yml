@@ -1,0 +1,17 @@
+ja:
+  enums:
+
+    #予約モデル
+    appointment:
+      #診察種別
+      examination_type:
+        first_visit: "初診"
+        revisit: "再診"
+
+    #予約枠モデル
+    appointment_frame:
+      #予約枠ステータス
+      app_frame_status:
+        temporary_hold: "仮押さえ"
+        reserved: "予約済み"
+        cancel: "キャンセル"
