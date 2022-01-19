@@ -33,7 +33,7 @@ Rails.application.routes.draw do
       get "my_page" => "patients#show"                           #患者マイページ
     end
 
-    resources :appointment_frames, only:[:index, :edit, :update] #予約一覧ページ・予約キャンセルページ・キャンセル処理
+    resources :appointment_frames, except:[:show, :new, :destroy]#予約一覧ページ・予約キャンセルページ・キャンセル処理
     resources :appointments, only:[:new, :index, :show] do       #予約情報入力ページ・予約一覧ページ・予約詳細ページ
       post "confirm" => "appointments#confirm"                   #予約情報確認ページ
     end
