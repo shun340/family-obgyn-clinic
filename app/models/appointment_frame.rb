@@ -5,6 +5,6 @@ class AppointmentFrame < ApplicationRecord
 
   #enum設定
   ##予約枠ステータス
-  enum app_frame_status: { temporary_hold: 0, reserved: 1, cancel: 2 }
+  enum app_frame_status: { reserved: 0, cancel: 1 }
 
 end

@@ -1,2 +1,11 @@
-<h1>予約カレンダー</h1>
+<h1>予約日時を選択してください</h1>
+
+<% @appointment_frames.each do |appointment_frame| %>
+  <tr>
+    <td><%= appointment_frame.start_time %></td>
+    <td><%= appointment_frame.end_time %></td>
+    <td><%= appointment_frame.app_frame_status_i18n %></td>
+  </tr>
+<% end %>
+
 <div id="calendar"></div>

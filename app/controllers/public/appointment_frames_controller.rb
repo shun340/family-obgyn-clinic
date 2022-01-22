@@ -1,6 +1,7 @@
 class Public::AppointmentFramesController < ApplicationController
 
   def index
+    @appointment_frames = AppointmentFrame.all
   end
   
   def create

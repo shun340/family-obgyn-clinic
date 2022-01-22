@@ -12,6 +12,5 @@ ja:
     appointment_frame:
       #予約枠ステータス
       app_frame_status:
-        temporary_hold: "仮押さえ"
         reserved: "予約済み"
         cancel: "キャンセル"
