@@ -6,5 +6,7 @@ class Patient < ApplicationRecord
          
   # アソシエーション       
   has_many :appointments, dependent: :destroy
+  has_many :appointment_frames, dependent: :destroy
+  
   
 end

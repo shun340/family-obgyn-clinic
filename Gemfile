@@ -66,3 +66,4 @@ gem 'enum_help'
 gem 'jquery-rails'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem "simple_calendar", "~> 2.0"
