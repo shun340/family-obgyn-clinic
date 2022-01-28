@@ -1,0 +1,24 @@
+<h1>予約内容をご記入ください</h1>
+
+<%= form_with model: @appointment, local: true, url: confirm_appointments_path(@patient) do |f| %>
+  <div class="form-group">
+    <%= f.radio_button :examination_type, Appointment.examination_types.key(0) %>
+    <%= f.label :examination_type, Appointment.examination_types_i18n[:first_visit] %>
+    <%= f.radio_button :examination_type, Appointment.examination_types.key(1) %>
+    <%= f.label :examination_type, Appointment.examination_types_i18n[:revisit]%>
+  </div>
+  <div class="form-group">
+    <%= f.label :counseling_title %>
+    <%= f.text_field :counseling_title %>
+  </div>
+  <div class="form-group">
+    <%= f.label :counseling_detail %>
+    <%= f.text_area :counseling_detail %>
+  </div>
+
+  <%= f.hidden_field :examination_status, :value => false %>
+
+  <div class="form-group">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -4,7 +4,6 @@ class Patient < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
-  # アソシエーション       
   has_many :appointments, dependent: :destroy
   has_many :appointment_frames, dependent: :destroy
   

@@ -24,3 +24,8 @@ ja:
     - 木
     - 金
     - 土
+    
+  activerecord:
+  errors:
+    messages:
+      record_invalid: "バリデーションに失敗しました: %{errors}"

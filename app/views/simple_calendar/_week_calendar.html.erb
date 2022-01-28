@@ -40,7 +40,7 @@
                 <% if check_appointment_frame(appointment_frames, day, time) %>
                   <%= '×' %>
                 <% else %>
-                  <%= link_to new_appointment_frame_path(day: day, time: time) do %>
+                  <%= link_to new_appointment_path(day: day, time: time) do %>
                     <%= '○' %>
                   <% end %>
                 <% end %>
