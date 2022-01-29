@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2022_01_17_112118) do
   end
 
   create_table "appointment_frames", force: :cascade do |t|
-    t.integer "patient_id", null: false
+    t.integer "appointment_id", null: false
     t.date "day", null: false
     t.string "time", null: false
     t.datetime "start_time", null: false

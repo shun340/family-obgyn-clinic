@@ -1,6 +1,6 @@
 class AppointmentFrame < ApplicationRecord
 
-  belongs_to :patient
+  belongs_to :appointment
 
   validates :day, presence: true
   validates :time, presence: true
