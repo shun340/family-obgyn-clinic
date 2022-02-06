@@ -35,6 +35,7 @@ Rails.application.routes.draw do
 
     resources :appointment_frames                                #予約一覧ページ・予約キャンセルページ・キャンセル処理
     resources :appointments, except:[:edit, :update, :destroy] do#予約情報入力ページ・予約一覧ページ・予約詳細ページ
+      post "detail", on: :collection
       post "confirm", on: :collection                            #予約情報確認ページ
     end
   end

@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 2022_01_17_112118) do
 
   create_table "appointment_frames", force: :cascade do |t|
     t.integer "appointment_id", null: false
-    t.date "day", null: false
-    t.string "time", null: false
     t.datetime "start_time", null: false
+    t.datetime "end_time"
+    t.integer "app_frame_status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

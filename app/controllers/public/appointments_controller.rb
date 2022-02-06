@@ -4,11 +4,20 @@ class Public::AppointmentsController < ApplicationController
   def new
     @appointment = Appointment.new
     @patient = current_patient
+    @appointment.build_appointment_frame
   end
-
+  
+  def detail
+    session[:appointment_frame_attributes_step1] = appointment_params[:appointment_frame_attributes]
+    @appointment = Appointment.new
+    @patient = current_patient
+    @appointment.build_appointment_frame
+  end
+ 
   def confirm
     @appointment = Appointment.new(appointment_params)
-    
+    @patient = current_patient
+    @appointment.build_appointment_frame
   end
   
   def create
@@ -33,7 +42,7 @@ class Public::AppointmentsController < ApplicationController
   private
   
   def appointment_params
-    params.require(:appointment).permit(:examination_type, :counseling_title, :counseling_detail, :examination_status).merge(patient_id: current_patient.id)
+    params.require(:appointment).permit(:examination_type, :counseling_title, :counseling_detail, :examination_status, appointment_frame_attributes: [:id, :day, :time, :start_time])
   end
 
 end
