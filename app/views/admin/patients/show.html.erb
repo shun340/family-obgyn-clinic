@@ -1,0 +1,12 @@
+<h1>患者情報詳細</h1>
+
+<h2><%= @patient.last_name %> <%= @patient.first_name %>さんの患者情報</h2>
+
+<p>氏名: <%= @patient.last_name %> <%= @patient.first_name %></p>
+<p>カナ: <%= @patient.last_name_kana %> <%= @patient.first_name_kana %></p>
+<p>年齢: <%= @patient.age %></p>
+<p>E-mail: <%= @patient.email %></p>
+<p>電話番号: <%= @patient.phone_number %></p>
+
+<p><%= link_to "編集する",edit_admin_patient_path, class:"btn btn-success"%></p>
+<p><%= link_to "予約一覧を見る",admin_appointments_path, class:"btn btn-primary"%></p>

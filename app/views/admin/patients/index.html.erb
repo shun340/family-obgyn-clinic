@@ -1,0 +1,42 @@
+<h1>患者一覧</h1>
+
+<table>
+  
+  <thead>
+    <tr>
+      <th>患者ID</th>
+      <th>氏名</th>
+      <th>メールアドレス</th>
+      <th>電話番号</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patients.each do |patient| %>
+    
+      <tr>
+        <td>
+          <%= patient.id %>
+        </td>
+        
+        <td>
+          <%= link_to admin_patient_path(patient) do %>
+            <%= patient.last_name %>
+            <%= patient.first_name %>
+          <% end %>
+        </td>
+        
+        <td>
+          <%= patient.email %>
+        </td>
+        
+        <td>
+          <%= patient.phone_number %>
+        </td>
+        
+      </tr>
+    
+    <% end %>
+  </tbody>
+  
+</table>
