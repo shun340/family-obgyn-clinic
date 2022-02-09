@@ -7,6 +7,10 @@ ja:
       examination_type:
         first_visit: "初診"
         revisit: "再診"
+      #診察ステータス
+      examination_status:
+        finished: "完了"
+        unfinished: "未了"
 
     #予約枠モデル
     appointment_frame:

@@ -1,0 +1,20 @@
+<h1>予約詳細</h1>
+
+<h2><%= @appointment.appointment_frame.start_time %>〜</h2>
+
+<h3>患者名：<%= @appointment.patient.last_name %> <%= @appointment.patient.first_name %></h3>
+
+<h3>診察種別：<%= @appointment.examination_type_i18n %></h3>
+
+<h3>相談タイトル：<%= @appointment.counseling_title %></h3>
+
+<h3>相談内容</h3>
+
+<p><%= @appointment.counseling_detail %></p>
+
+<h3>診察ステータス：<%= @appointment.examination_status_i18n %></h3>
+
+  <%= form_with model: @appointment, url: admin_appointment_path, method: :patch, local: true do |f| %>
+    <%= f.select :examination_status, Appointment.examination_statuses.keys, class: "examination_status" %>
+    <%= f.submit '更新', class:"btn btn-sm btn-success" %>
+  <% end %>

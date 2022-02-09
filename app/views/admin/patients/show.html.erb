@@ -10,3 +10,42 @@
 
 <p><%= link_to "編集する",edit_admin_patient_path, class:"btn btn-success"%></p>
 <p><%= link_to "予約一覧を見る",admin_appointments_path, class:"btn btn-primary"%></p>
+
+
+<h2><%= @patient.last_name %> <%= @patient.first_name %>さんの予約一覧</h2>
+
+<table>
+  
+  <thead>
+    <tr>
+      <th>予約ID</th>
+      <th>予約日時</th>
+      <th>診察種別</th>
+      <th>相談タイトル</th>
+      <th>相談内容</th>
+      <th>診察ステータス</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.id %></td>
+        <td><%= appointment.appointment_frame.start_time %></td>
+        <td><%= appointment.examination_type_i18n %></td>
+        <td>
+          <%= link_to admin_appointment_path(appointment) do %>
+            <%= appointment.counseling_title %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to admin_appointment_path(appointment) do %>
+            <%= appointment.counseling_detail %>
+          <% end %>
+        </td>
+        <td><%= appointment.examination_status_i18n %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+</table>

@@ -1,0 +1,48 @@
+<h1>予約一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>患者名</th>
+      <th>予約日時</th>
+      <th>診察種別</th>
+      <th>相談タイトル</th>
+      <th>相談内容</th>
+      <th>診察ステータス</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th>
+        <% @appointments.each do |appointment| %>
+          <tr>
+            <td>
+              <%= link_to admin_patient_path(appointment.patient) do %>
+                <%= appointment.patient.last_name %> <%= appointment.patient.first_name %>
+              <% end %>
+            </td>
+            
+            <td><%= appointment.appointment_frame.start_time %></td>
+            
+            <td><%= appointment.examination_type_i18n %></td>
+            
+            <td>
+              <%= link_to admin_appointment_path(appointment) do %>
+                <%= appointment.counseling_title %>
+              <% end %>
+            </td>
+            
+            <td>
+              <%= link_to admin_appointment_path(appointment) do %>
+                <%= appointment.counseling_detail %>
+              <% end %>
+            </td>
+            
+            <td><%= appointment.examination_status_i18n %></td>
+          </tr>
+        <% end %>
+      </th>
+    </tr>
+  </tbody>
+</table>

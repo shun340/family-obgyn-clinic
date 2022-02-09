@@ -9,5 +9,6 @@ class Appointment < ApplicationRecord
   accepts_nested_attributes_for :appointment_frame, allow_destroy: true
   
   enum examination_type: { first_visit: 0, revisit:1 }
+  enum examination_status: { finished: true, unfinished: false }
   
 end
