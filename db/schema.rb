@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2022_01_17_112118) do
   create_table "doctor_comments", force: :cascade do |t|
     t.integer "appointment_id", null: false
     t.integer "admin_id", null: false
-    t.text "doctor_comment", null: false
+    t.text "comment", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -7,6 +7,7 @@ class Admin::AppointmentsController < ApplicationController
 
   def show
     @appointment = Appointment.find(params[:id])
+    @doctor_comment = DoctorComment.new
   end
 
   def update

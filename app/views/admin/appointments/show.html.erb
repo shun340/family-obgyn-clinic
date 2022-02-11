@@ -18,3 +18,19 @@
     <%= f.select :examination_status, Appointment.examination_statuses.keys, class: "examination_status" %>
     <%= f.submit '更新', class:"btn btn-sm btn-success" %>
   <% end %>
+
+<div>
+<p>コメント件数：<%= @appointment.doctor_comments.count %></p>
+<% @appointment.doctor_comments.each do |doctor_comment| %>
+  <%= doctor_comment.admin.name %>
+  <%= doctor_comment.created_at.strftime('%Y/%m/%d') %>
+  <%= doctor_comment.comment %>
+<% end %>
+</div>
+
+<div>
+<%= form_with(model:[@appointment, @doctor_comment], url: admin_appointment_doctor_comments_path(@appointment), local: true) do |f| %>
+  <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
+  <%= f.submit "送信する" %>
+<% end %>
+</div>

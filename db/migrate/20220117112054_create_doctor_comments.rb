@@ -4,7 +4,7 @@ class CreateDoctorComments < ActiveRecord::Migration[5.2]
       
       t.integer  :appointment_id, null: false
       t.integer  :admin_id, null: false
-      t.text     :doctor_comment, null: false
+      t.text     :comment, null: false
       t.timestamps
       
     end

@@ -9,6 +9,7 @@
       <th>相談タイトル</th>
       <th>相談内容</th>
       <th>診察ステータス</th>
+      <th>医師コメント</th>
     </tr>
   </thead>
 
@@ -40,6 +41,8 @@
             </td>
             
             <td><%= appointment.examination_status_i18n %></td>
+            
+            <td><%= link_to "#{appointment.doctor_comments.count} コメント", appointment_path(appointment.id) %></td>
           </tr>
         <% end %>
       </th>
