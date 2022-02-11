@@ -25,6 +25,11 @@
   <%= doctor_comment.admin.name %>
   <%= doctor_comment.created_at.strftime('%Y/%m/%d') %>
   <%= doctor_comment.comment %>
+  <% if doctor_comment.admin == current_admin %>
+  <div>
+    <%= link_to "削除", admin_appointment_doctor_comment_path(doctor_comment.appointment, doctor_comment), method: :delete %>
+  </div>
+  <% end %>
 <% end %>
 </div>
 

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     resources :appointment_frames, only: :index
     resources :appointments, only:[:index, :show, :update] do
       resources :appointment_frames, only: :update
-      resources :doctor_comments, except:[:index, :show, :destroy]
+      resources :doctor_comments, except:[:index, :show]
       resource  :checks, only:[:create, :destroy]
     end
   end
